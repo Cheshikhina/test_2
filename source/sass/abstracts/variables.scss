@@ -1,0 +1,40 @@
+// sizes
+$mobile_min: 320px;
+$mobile_max: 768px;
+$tablet_max: 1024px;
+$desktop_max: 1440px;
+$no_mobile: 769px;
+
+// color scheme
+$white:#ffffff;
+$light:#f1f1f1;
+$line: #696969;
+$accent1_0:#fe8057;
+$accent2_0:#4e93e1;
+$accent2_1:#66d0fa;
+$dark: #25262a;
+$darken: #020202;
+$darken_02: rgba($darken, 0.2);
+$black:#000000;
+$black_03: rgba($black, 0.302);
+$black_05: rgba($black, 0.502);
+
+$box-shadow: 0 3px 10px 0 $darken_02;
+
+// another
+$transition: all 0.3s;
+$opacity: 0.87;
+$br_4: 4px;
+$br_10: 10px;
+$br_12: 12px;
+$br_30: 30px;
+$ls_02: 0.2px;
+$ls_03: 0.3px;
+$ls_08: 0.8px;
+$ls_05: 0.5px;
+$ls_12: 1.2px;
+$ls_17: 1.7px;
+
+// retina
+$retina_dpi: 144dpi;
+$retina_dppx: 1.5dppx;

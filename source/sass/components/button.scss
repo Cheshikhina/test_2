@@ -1,0 +1,114 @@
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 11px 15px;
+  color: $white;
+  background-color: transparent;
+  border: 2px solid $accent1_0;
+  border-radius: $br_4;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0.99;
+  overflow: hidden;
+  transition: $transition;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: $accent1_0;
+    top: 0;
+    left: auto;
+    right: 0;
+    z-index: -1;
+    transition: $transition;
+  }
+}
+
+.button:active {
+  opacity: $opacity;
+
+  &::before {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+}
+
+.button--full {
+  &::before {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  &:active {
+    opacity: $opacity;
+
+    &::before {
+      width: 0;
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+.button--round {
+  width: auto;
+  padding: 15px 15px 16px;
+  color: $accent1_0;
+  text-transform: none;
+  border-radius: $br_30;
+
+  &:active {
+    color: $white;
+    opacity: $opacity;
+
+    &::before {
+      width: 100%;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+@media (max-width: $tablet_max) {
+  .button--round {
+    padding: 10px 15px 13px;
+  }
+}
+
+@media (min-width: $no_mobile) {
+
+  .button:hover,
+  .button:focus {
+    &::before {
+      width: 100%;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .button--full:hover,
+  .button--full:focus {
+    &::before {
+      width: 0;
+      left: auto;
+      right: 0;
+    }
+  }
+
+  .button--round:hover,
+  .button--round:focus {
+    color: $white;
+
+    &::before {
+      width: 100%;
+      left: 0;
+      right: 0;
+    }
+  }
+}

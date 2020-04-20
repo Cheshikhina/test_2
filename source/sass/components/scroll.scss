@@ -1,0 +1,72 @@
+.scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scroll__button {
+  @include button;
+  position: relative;
+  width: 24px;
+  height: 38px;
+  border: 2px solid $white;
+  margin-bottom: 16px;
+  border-radius: $br_12;
+  transition: $transition;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 2px;
+    height: 7px;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $white;
+    transition: $transition;
+  }
+
+  &:active {
+    border-color: $accent1_0;
+    opacity: $opacity;
+
+    &::before {
+      background-color: $accent1_0;
+    }
+  }
+}
+
+.scroll__text {
+  @include fs_scroll;
+  margin: 0;
+  letter-spacing: $ls_05;
+}
+
+@media (max-width: $tablet_max) {
+  .scroll__text {
+    @include visually_hidden;
+  }
+
+  .scroll__button {
+    height: 39px;
+    margin-bottom: 8px;
+
+    &::before {
+      height: 8px;
+    }
+  }
+}
+
+@media (min-width: $no_mobile) {
+
+  .scroll__button:hover,
+  .scroll__button:focus {
+    border-color: $accent1_0;
+
+    &::before {
+      background-color: $accent1_0;
+      animation: 0.9s infinite both scroll;
+    }
+  }
+}

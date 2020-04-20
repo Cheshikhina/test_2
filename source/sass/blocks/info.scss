@@ -1,0 +1,28 @@
+.info {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.info__button {
+  @include fs_info_title;
+  min-width: 561px;
+  margin: 0px 22.7%;
+}
+
+@media (max-width: $tablet_max) {
+  .info {
+    padding-top: 111px;
+    padding-bottom: 90px;
+  }
+
+  .info__button {
+    min-width: auto;
+    margin: 0 21%;
+  }
+}
+
+@media (max-width: $mobile_max) {
+  .info {
+    display: none;
+  }
+}

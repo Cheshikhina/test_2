@@ -1,0 +1,23 @@
+.container {
+  width: 100%;
+  max-width: $desktop_max - (80px - 30px)*2;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.container--programs {
+  padding: 0 20px;
+}
+
+@media (max-width: $tablet_max) {
+  .container--programs {
+    padding: 0 26px;
+  }
+}
+
+@media (max-width: $mobile_max) {
+  .container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}

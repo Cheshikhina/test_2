@@ -1,0 +1,42 @@
+.main_background {
+  @include image("main", "jpg", "true", "true");
+  position: relative;
+  min-height: 880px;
+  height: 0;
+  width: 100%;
+  max-width: $desktop_max;
+  background-size: cover;
+  margin: 0 auto;
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 100%;
+    width: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    background-color: $accent1_0;
+    z-index: -1;
+  }
+}
+
+@media (max-width: $desktop_max) {
+.main_background {
+  &::after {
+    display: none;
+  }}
+}
+
+@media (max-width: $tablet_max) {
+  .main_background {
+    min-height: 768px;
+  }
+}
+
+@media (max-width: $mobile_max) {
+  .main_background {
+    min-height: 480px;
+  }
+}

@@ -1,0 +1,41 @@
+.programs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 14px;
+  margin-bottom: 188px;
+  overflow: visible;
+}
+
+.programs__title {
+  @include fs_block_title;
+  margin: 0;
+  margin-bottom: 81px;
+  text-transform: uppercase;
+  color: $accent2_0;
+  text-align: center;
+  letter-spacing: $ls_05;
+}
+
+@media (max-width: $tablet_max) {
+  .programs {
+    margin-bottom: 123px;
+  }
+
+  .programs__title {
+    margin-bottom: 66px;
+  }
+}
+
+@media (max-width: $mobile_max) {
+  .programs {
+    padding: 0;
+    margin-bottom: 114px;
+  }
+
+  .programs__title {
+    margin-top: 43px;
+    margin-bottom: 36px;
+    letter-spacing: $ls_03;
+    text-indent: -4px;
+  }
+}

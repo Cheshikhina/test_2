@@ -1,0 +1,55 @@
+.link {
+  position: relative;
+  text-decoration: none;
+  background-color: transparent;
+  opacity: 0.99;
+  transition: $transition;
+
+  svg {
+    fill: $white;
+    transition: $transition;
+
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -2px;
+    left: auto;
+    right: 0;
+    height: 2px;
+    width: 0;
+    z-index: -1;
+    background-color: $accent1_0;
+    transition: $transition;
+  }
+}
+
+.link:active {
+  &::after {
+    width: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba($accent1_0, $opacity);
+  }
+
+  svg {
+    fill: rgba($accent1_0, $opacity);
+  }
+}
+
+@media (min-width: $no_mobile) {
+
+  .link:hover,
+  .link:focus {
+    &::after {
+      width: 100%;
+      left: 0;
+      right: 0;
+    }
+
+    svg {
+      fill: $accent1_0;
+    }
+  }
+}

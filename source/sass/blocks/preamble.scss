@@ -1,0 +1,109 @@
+.preamble {
+  display: flex;
+  flex-direction: column;
+  margin-top: 108px;
+  color: $white;
+  min-height: 880px;
+}
+
+.preamble__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: flex-end;
+  width: 100%;
+  max-width: 631px;
+  margin-bottom: 130px;
+}
+
+.preamble__title {
+  @include fs_preamble_title;
+  margin: 0;
+  margin-bottom: 38px;
+  letter-spacing: $ls_12;
+
+  span {
+    color: $accent1_0;
+  }
+}
+
+.preamble__desc {
+  @include fs_preamble_text;
+  max-width: 415px;
+  margin: 0;
+  margin-bottom: 35px;
+  padding-right: 1%;
+  color: $light;
+}
+
+.preamble__button {
+  @include fs_preamble_button;
+  margin: 20px 0;
+  margin-right: 17.1%;
+  max-width: 305px;
+  letter-spacing: normal;
+}
+
+.preamble__scroll {
+  position: absolute;
+  bottom: 44px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: $tablet_max) {
+  .preamble {
+    min-height: auto;
+  }
+
+  .preamble__info {
+    max-width: 526px;
+  }
+
+  .preamble__title {
+    margin-bottom: 36px;
+    letter-spacing: $ls_08;
+  }
+
+  .preamble__desc {
+    max-width: 418px;
+    margin-bottom: 21px;
+  }
+
+  .preamble__button {
+    margin-right: 21.5%;
+    letter-spacing: $ls_17;
+  }
+}
+
+@media (max-width: $mobile_max) {
+  .preamble {
+    margin-top: 45px;
+    text-align: center;
+  }
+
+  .preamble__title {
+    margin-bottom: 42px;
+    letter-spacing: 0;
+  }
+
+  .preamble__desc {
+    max-width: 100%;
+    margin-bottom: 45px;
+  }
+
+  .preamble__button {
+    margin-right: auto;
+    margin-left: auto;
+    letter-spacing: 0;
+  }
+
+  .preamble__scroll {
+    display: none;
+  }
+
+  .preamble__info {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}

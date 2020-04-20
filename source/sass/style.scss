@@ -1,0 +1,30 @@
+@charset "utf-8";
+@import "normalize";
+
+// abstracts
+@import "./abstracts/variables";
+@import "./abstracts/mixin";
+@import "./abstracts/visually_hidden";
+@import "./abstracts/animations";
+
+// libs for plugins
+@import "./libs/tiny_slider";
+
+// general
+@import "./general/fonts";
+@import "./general/scaffolding";
+
+// components
+@import "./components/container";
+@import "./components/image";
+@import "./components/button";
+@import "./components/link";
+@import "./components/scroll";
+@import "./components/program";
+
+// blocks
+@import "./blocks/header";
+@import "./blocks/main_background";
+@import "./blocks/preamble";
+@import "./blocks/info";
+@import "./blocks/programs";

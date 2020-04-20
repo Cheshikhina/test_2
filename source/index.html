@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Преподам">
+  <title>Преподам</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+  <header class="main_background">
+    <div class="main_background__header header container">
+      <a class="header__logo logo">
+        <picture>
+          <source type="image/webp" media="(max-width: 767px)" srcset="./img/logo__mobile@1x.webp 1x, ./img/logo__mobile@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1024px)" srcset="./img/logo__tablet@1x.webp 1x, ./img/logo__tablet@2x.webp 2x">
+          <source type="image/webp" srcset="./img/logo__desktop@1x.webp 1x, ./img/logo__desktop@2x.webp 2x">
+
+          <!-- 1х: 88px; 2x: 178px -->
+          <source media="(max-width: 767px)" srcset="./img/logo__mobile@1x.png 1x, ./img/logo__mobile@2x.png 2x">
+          <!-- 1х: 108px; 2x: 216px -->
+          <source media="(max-width: 1024px)" srcset="./img/logo__tablet@1x.png 1x, ./img/logo__tablet@2x.png 2x">
+          <!-- 1х: 111px; 2x: 222px -->
+          <img src="img/logo__desktop@1x.png" srcset="img/logo__desktop@2x.png 2x" alt="Логотип компании" width="111" height="111">
+        </picture>
+      </a>
+      <p class="header__city">Москва</p>
+      <a class="header__phone link" href="tel:+78005623452">+7 800-562-3452
+        <svg width="17" height="24">
+          <use xlink:href="./img/sprite.svg#icon_phone"></use>
+        </svg>
+      </a>
+      <div class="header__inner">
+        <button type="button" class="header__menu" aria-label="Открыть/закрыть меню"><span aria-hidden="true"></span></button>
+        <nav class="header__nav">
+          <a href="#" class="header__nav_link link">О&nbsp;проекте</a>
+          <a href="#" class="header__nav_link link">Онлайн-курсы</a>
+          <a href="#" class="header__nav_link link">Статьи</a>
+        </nav>
+        <a href="#" class="header__teachers button">ПРеподавателям</a>
+        <div class="header__links">
+          <a href="#" class="header__link link">Регистрация</a>
+          <a href="#" class="header__link link">Вход</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="main_background__preamble preamble container">
+      <div class="preamble__info">
+        <h1 class="preamble__title"><span>Первая</span> образовательная онлайн-платформа, созданная преподами!</h1>
+        <p class="preamble__desc">Описание уникального торгового предложения или&nbsp;же описание названия того или иного продукта, который на&nbsp;первом экран</p>
+        <a href="#" class="preamble__button button button--full">зарегистрироваться</a>
+      </div>
+      <div class="preamble__scroll scroll">
+        <a href="#info_page" aria-label="Прокрутить к следующему блоку" class="scroll__button"></a>
+        <p class="scroll__text">ПОДРОБНЕЕ НИЖЕ</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="info_page" class="info container">
+      <h2 class="visually_hidden">Актуальная информация</h2>
+      <a href="#" class="info__button button button--round">199 преподавателей уже работает на&nbsp;сайте</a>
+    </section>
+    <section class="programs container container--programs">
+      <h2 class="programs__title">Выберите свою программу</h2>
+      <div class="programs__slider slider">
+        <a href="#" class="slider__item program">
+          <div class="program__image image">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="./img/program1__mobile@1x.webp 1x, ./img/program1__mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1024px)" srcset="./img/program1__tablet@1x.webp 1x, ./img/program1__tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/program1__desktop@1x.webp 1x, ./img/program1__desktop@2x.webp 2x">
+
+              <!-- 1х: 261px; 2x: 522px -->
+              <source media="(max-width: 767px)" srcset="./img/program1__mobile@1x.jpg 1x, ./img/program1__mobile@2x.jpg 2x">
+              <!-- 1х: 304px; 2x: 608px -->
+              <source media="(max-width: 1024px)" srcset="./img/program1__tablet@1x.jpg 1x, ./img/program1__tablet@2x.jpg 2x">
+              <!-- 1х: 414px; 2x: 826px -->
+              <img src="img/program1__desktop@1x.jpg" srcset="img/program1__desktop@2x.jpg 2x" alt="Мальчик-школьник в желтой футболке" width="414" height="450">
+            </picture>
+          </div>
+          <div class="program__info">
+            <h3 class="program__text program__text--title">Школьная программа</h3>
+            <p class="program__text program__text--detail">Подробнее о программе</p>
+          </div>
+        </a>
+        <a href="#" class="slider__item program">
+          <div class="program__image image">
+            <picture>
+              <source type="image/webp" media="(max-width: 1024px)" srcset="./img/program2__tablet@1x.webp 1x, ./img/program2__tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/program2__desktop@1x.webp 1x, ./img/program2__desktop@2x.webp 2x">
+
+              <!-- 1х: 304px; 2x: 608px -->
+              <source media="(max-width: 1024px)" srcset="./img/program2__tablet@1x.jpg 1x, ./img/program2__tablet@2x.jpg 2x">
+              <!-- 1х: 414px; 2x: 826px -->
+              <img src="img/program2__desktop@1x.jpg" srcset="img/program2__desktop@2x.jpg 2x" alt="Молодая девушка с книгой в руке" width="414" height="450">
+            </picture>
+          </div>
+          <div class="program__info">
+            <h3 class="program__text program__text--title">Студенческая программа</h3>
+            <p class="program__text program__text--detail">Подробнее о программе</p>
+          </div>
+        </a>
+        <a href="#" class="slider__item program">
+          <div class="program__image image">
+            <picture>
+              <source type="image/webp" media="(max-width: 1024px)" srcset="./img/program3__tablet@1x.webp 1x, ./img/program3__tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/program3__desktop@1x.webp 1x, ./img/program3__desktop@2x.webp 2x">
+
+              <!-- 1х: 304px; 2x: 608px -->
+              <source media="(max-width: 1024px)" srcset="./img/program3__tablet@1x.jpg 1x, ./img/program3__tablet@2x.jpg 2x">
+              <!-- 1х: 414px; 2x: 826px -->
+              <img src="img/program3__desktop@1x.jpg" srcset="img/program3__desktop@2x.jpg 2x" alt="Молодой человек в очках и голубой рубашке" width="414" height="450">
+            </picture>
+          </div>
+          <div class="program__info">
+            <h3 class="program__text program__text--title">Дополнительное образование</h3>
+            <p class="program__text program__text--detail">Подробнее о программе</p>
+          </div>
+        </a>
+        <a href="#" class="slider__item program">
+          <div class="program__image image">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="./img/program1__mobile@1x.webp 1x, ./img/program1__mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1024px)" srcset="./img/program1__tablet@1x.webp 1x, ./img/program1__tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/program1__desktop@1x.webp 1x, ./img/program1__desktop@2x.webp 2x">
+
+              <!-- 1х: 261px; 2x: 522px -->
+              <source media="(max-width: 767px)" srcset="./img/program1__mobile@1x.jpg 1x, ./img/program1__mobile@2x.jpg 2x">
+              <!-- 1х: 304px; 2x: 608px -->
+              <source media="(max-width: 1024px)" srcset="./img/program1__tablet@1x.jpg 1x, ./img/program1__tablet@2x.jpg 2x">
+              <!-- 1х: 414px; 2x: 826px -->
+              <img src="img/program1__desktop@1x.jpg" srcset="img/program1__desktop@2x.jpg 2x" alt="Мальчик-школьник в желтой футболке" width="414" height="450">
+            </picture>
+          </div>
+          <div class="program__info">
+            <h3 class="program__text program__text--title">Школьная программа</h3>
+            <p class="program__text program__text--detail">Подробнее о программе</p>
+          </div>
+        </a>
+        <a href="#" class="slider__item program">
+          <div class="program__image image">
+            <picture>
+              <source type="image/webp" media="(max-width: 1024px)" srcset="./img/program2__tablet@1x.webp 1x, ./img/program2__tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/program2__desktop@1x.webp 1x, ./img/program2__desktop@2x.webp 2x">
+
+              <!-- 1х: 304px; 2x: 608px -->
+              <source media="(max-width: 1024px)" srcset="./img/program2__tablet@1x.jpg 1x, ./img/program2__tablet@2x.jpg 2x">
+              <!-- 1х: 414px; 2x: 826px -->
+              <img src="img/program2__desktop@1x.jpg" srcset="img/program2__desktop@2x.jpg 2x" alt="Молодая девушка с книгой в руке" width="414" height="450">
+            </picture>
+          </div>
+          <div class="program__info">
+            <h3 class="program__text program__text--title">Студенческая программа</h3>
+            <p class="program__text program__text--detail">Подробнее о программе</p>
+          </div>
+        </a>
+        <a href="#" class="slider__item program">
+          <div class="program__image image">
+            <picture>
+              <source type="image/webp" media="(max-width: 1024px)" srcset="./img/program3__tablet@1x.webp 1x, ./img/program3__tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/program3__desktop@1x.webp 1x, ./img/program3__desktop@2x.webp 2x">
+
+              <!-- 1х: 304px; 2x: 608px -->
+              <source media="(max-width: 1024px)" srcset="./img/program3__tablet@1x.jpg 1x, ./img/program3__tablet@2x.jpg 2x">
+              <!-- 1х: 414px; 2x: 826px -->
+              <img src="img/program3__desktop@1x.jpg" srcset="img/program3__desktop@2x.jpg 2x" alt="Молодой человек в очках и голубой рубашке" width="414" height="450">
+            </picture>
+          </div>
+          <div class="program__info">
+            <h3 class="program__text program__text--title">Дополнительное образование</h3>
+            <p class="program__text program__text--detail">Подробнее о программе</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script src="./js/vendor.min.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
