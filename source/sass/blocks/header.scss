@@ -1,8 +1,8 @@
 .header {
   @include fs_header_link;
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
   align-items: center;
   min-height: 130px;
   color: $white;
@@ -24,8 +24,8 @@
 
 .header__city {
   margin: 0;
-  margin-left: 3.2%;
-  margin-right: 1%;
+  margin-right: 2px;
+  justify-self: end;
 }
 
 .header__inner {
@@ -33,6 +33,7 @@
   flex-wrap: wrap;
   align-items: center;
   flex: 1 1;
+  grid-column: 5 / span last;
 }
 
 .header__phone,
@@ -44,10 +45,10 @@
 
 .header__phone {
   position: relative;
-  margin-left: 1.2%;
-  margin-right: 1%;
+  grid-column: 3 / span 2;
   padding-left: 27px;
   letter-spacing: $ls_03;
+  justify-self: center;
 
   svg {
     position: absolute;
@@ -60,7 +61,7 @@
 
 .header__nav {
   flex: 1 1;
-  margin-left: 1.9%;
+  margin-left: 0.8%;
 }
 
 .header__nav_link {
@@ -94,41 +95,37 @@
     padding: 0 10px;
   }
 
-  .header__city {
-    margin: 0 1% 0 0.5%;
-  }
-
   .header__phone {
-    margin-left: 1%;
-    margin-right: 0.5%;
-    padding-left: 15px;
-
-    svg {
-      left: -1px;
-    }
+    padding-left: 25px;
   }
 
   .header__nav {
-    margin-left: 1%;
+    display: flex;
+    margin: 0 13px;
   }
 
   .header__nav_link:not(:first-child) {
-    margin-left: 1%;
+    margin: 0 auto;
   }
 
   .header__teachers {
     max-width: 150px;
-    margin-right: 1%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
+  .header__link,
   .header__link:not(:last-child) {
-    margin-right: 10px;
+    margin-left: 13px;
+    margin-right: 0;
   }
 }
 
 @media (max-width: $tablet_max) {
   .header {
     padding: 0 30px;
+    grid-template-columns: repeat(10, 1fr);
+
   }
 
   .header__logo {
@@ -137,26 +134,24 @@
     left: 6px;
   }
 
-  .header__city {
-    margin-left: 4%;
-  }
-
   .header__phone {
-    margin-left: 1.6%;
-    margin-right: 1%;
-    padding-left: 2.2%;
+    padding-left: 27px;
+    justify-self: center;
+    transform: translateX(-6px);
     letter-spacing: 0;
   }
 
   .header__nav {
-    margin-left: 4%;
+    margin: 0;
+    margin-right: 1%;
   }
 
   .header__nav_link {
     letter-spacing: 0;
 
-    &:not(:first-child) {
-      margin-left: 8.7%;
+    &:nth-child(n) {
+      margin-left: 3px;
+      margin-right: auto;
     }
   }
 
@@ -253,7 +248,7 @@
       right: calc(26px + 1%);
       top: calc(100% - 19px);
       padding: 30px 4%;
-      padding-left: 2.8%;
+      padding-left: 1.5%;
       border-radius: $br_10 0 $br_10 $br_10;
       background-color: $white;
       opacity: 1;
@@ -276,29 +271,13 @@
     padding: 0 8px;
   }
 
-  .header__city {
-    margin-left: 1%;
-    margin-right: 0;
-  }
-
   .header__phone {
-    min-width: 134px;
-    margin-left: 1%;
-    padding-left: 1.9%;
-    margin-right: 0;
-  }
-
-  .header__nav {
-    margin-left: 1%;
-  }
-
-  .header__nav_link:not(:first-child) {
-    margin-left: 1%;
+    padding-left: 22px;
   }
 
   .header__teachers {
     max-width: 123px;
-    margin-right: 1%;
+    margin-right: 13px;
   }
 
   .header__inner--open {
@@ -310,6 +289,7 @@
 
 @media (max-width: $mobile_max) {
   .header {
+    display: flex;
     min-height: 108px;
     justify-content: space-around;
   }
@@ -365,6 +345,7 @@
     opacity: 0;
     right: 0;
     z-index: -5;
+    margin: 0 auto;
   }
 
   .header__inner--open {
@@ -415,7 +396,7 @@
     .header__nav_link {
       padding: 0 7px;
       margin: 15px 0;
-      text-indent: -7px;
+      text-indent: -4px;
     }
 
     .header__links {
@@ -429,6 +410,7 @@
 
       .header__link {
         color: $white;
+        margin-left: 0;
       }
 
       .header__link:not(:last-child) {
@@ -443,7 +425,7 @@
 
     .header__teachers {
       max-width: 200px;
-      margin-right: 0;
+      min-height: 40px;
     }
 
     .header__menu--open {

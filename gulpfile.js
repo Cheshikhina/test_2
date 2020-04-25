@@ -67,9 +67,7 @@ gulp.task("css", function () {
     .pipe(postcss([autoprefixer({
       browsers: [
         "last 2 versions",
-        "not dead",
-        "not IE <= 10",
-        "not ie_mob <= 10"
+        "not dead"
       ]
     })]))
     .pipe(csso())

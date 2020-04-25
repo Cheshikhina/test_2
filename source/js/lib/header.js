@@ -16,6 +16,7 @@
         if (headerInner.classList.contains('header__inner--open')) {
           headerInner.classList.remove('header__inner--open');
           headerButton.classList.remove('header__menu--open');
+          body.classList.remove('body_hidden');
         }
       }
     };

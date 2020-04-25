@@ -27,6 +27,10 @@
   white-space: nowrap;
 
   @media (max-width: $mobile_max) {
+    margin-left: 40px;
+  }
+
+    @media (max-width: 450px) {
     margin-left: 20px;
   }
 }
