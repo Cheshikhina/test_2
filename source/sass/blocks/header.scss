@@ -90,6 +90,10 @@
   order: 5;
 }
 
+.header__logo--menu {
+  display: none;
+}
+
 @media (max-width: 1250px) {
   .header {
     padding: 0 10px;
@@ -357,7 +361,7 @@
     flex-direction: column;
     flex-wrap: nowrap;
     padding: 8px;
-    padding-top: 113px;
+    padding-top: 25px;
     background-color: $dark;
     overflow-y: auto;
     z-index: 15;
@@ -432,6 +436,18 @@
       position: absolute;
       top: 40px;
       right: 32px;
+    }
+
+    .header__logo {
+      opacity: 0;
+    }
+
+    .header__logo--menu {
+      display: block;
+      position: relative;
+      opacity: 1;
+      top: -15px;
+      left: -1px;
     }
   }
 }

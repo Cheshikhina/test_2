@@ -35,6 +35,20 @@
       </a>
       <div class="header__inner">
         <button type="button" class="header__menu" aria-label="Открыть/закрыть меню"><span aria-hidden="true"></span></button>
+        <a class="header__logo header__logo--menu logo">
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)" srcset="./img/logo__mobile@1x.webp 1x, ./img/logo__mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1024px)" srcset="./img/logo__tablet@1x.webp 1x, ./img/logo__tablet@2x.webp 2x">
+            <source type="image/webp" srcset="./img/logo__desktop@1x.webp 1x, ./img/logo__desktop@2x.webp 2x">
+
+            <!-- 1х: 88px; 2x: 178px -->
+            <source media="(max-width: 767px)" srcset="./img/logo__mobile@1x.png 1x, ./img/logo__mobile@2x.png 2x">
+            <!-- 1х: 108px; 2x: 216px -->
+            <source media="(max-width: 1024px)" srcset="./img/logo__tablet@1x.png 1x, ./img/logo__tablet@2x.png 2x">
+            <!-- 1х: 111px; 2x: 222px -->
+            <img src="./img/logo__desktop@1x.png" srcset="./img/logo__desktop@2x.png 2x" alt="Логотип компании" width="111" height="111">
+          </picture>
+        </a>
         <nav class="header__nav">
           <a href="#" class="header__nav_link link">О&nbsp;проекте</a>
           <a href="#" class="header__nav_link link">Онлайн-курсы</a>
